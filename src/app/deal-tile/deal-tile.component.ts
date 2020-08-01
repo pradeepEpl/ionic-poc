@@ -9,10 +9,9 @@ import { LoadingController } from '@ionic/angular';
 })
 export class DealTileComponent implements OnInit {
 
-  circular : any[];
-  loading: any;
-  content : string = 'Loading'
-  data : any = {
+  circular: any[];
+  content: string = 'Loading'
+  data: any = {
     "errorcode": "0",
     "message": [
       {
@@ -368,22 +367,28 @@ export class DealTileComponent implements OnInit {
 
   constructor(
     private loadingController: LoadingController,
-    private apiService : ApiService) {
-    
-   }
+    private apiService: ApiService) {
+
+  }
 
   ngOnInit() {
-    // this.loading = this.loadingController.create(message: 'This Loader Will Auto Hide in 2 Seconds');
-    // this.loading.present();
-    
+    this.detailsfetch();
     //this.circular = this.data['message'];
-      
+    //this.apiService.getCircular().subscribe((data) => {
+    //this.circular = data['message'];
+      //console.log("News " + JSON.stringify(data));
+    //})
+  }
+
+  async detailsfetch() {
+    const loading = await this.loadingController.create({
+      message : 'Please wait',
+      translucent : true,
+    });
+    await loading.present();
     this.apiService.getCircular().subscribe((data) => {
       this.circular = data['message'];
-      //this.loading.dismissAll();
-      //console.log('Size ' + this.circular.length);
-      //console.log("News " + JSON.stringify(data));
+      loading.dismiss();
     })
-    
-  }
+    }
 }

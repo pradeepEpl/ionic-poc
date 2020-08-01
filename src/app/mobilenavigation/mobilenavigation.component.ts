@@ -7,8 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MobilenavigationComponent implements OnInit {
 
+  navigate : any = [
+    {
+      title : "Saving",
+      url   : "/saving",
+      icon : "cash-outline"
+    },
+    {
+      title : "Shopper Id",
+      url   : "/shopperid",
+      icon  : "eye-outline"
+    }
+  ]
+
   constructor() { }
 
   ngOnInit() {}
+
+    
 
 }

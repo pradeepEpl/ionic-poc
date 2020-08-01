@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'saving',
+    loadChildren: () => import('./saving/saving.module').then( m => m.SavingPageModule)
+  },
+  {
+    path: 'shopperid',
+    loadChildren: () => import('./shopperid/shopperid.module').then( m => m.ShopperidPageModule)
+  },
 ];
 
 @NgModule({

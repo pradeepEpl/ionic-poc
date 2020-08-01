@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Geolocation} from '@capacitor/core';
+import { Geolocation } from '@capacitor/core';
 import { NativeGeocoder, NativeGeocoderResult, NativeGeocoderOptions } from '@ionic-native/native-geocoder/ngx';
 
 @Component({
@@ -11,12 +11,12 @@ export class StoreLocatorComponent implements OnInit {
 
   latitude: number;
   longitude: number;
-  address : string;
+  address: string;
 
   options: NativeGeocoderOptions = {
     useLocale: true,
     maxResults: 5
-};
+  };
 
   constructor(public nativeGeocoder: NativeGeocoder) { }
 
@@ -36,10 +36,12 @@ export class StoreLocatorComponent implements OnInit {
     this.longitude = position.coords.longitude;
 
     this.nativeGeocoder.reverseGeocode(this.latitude, this.longitude, this.options)
-  .then((result: NativeGeocoderResult[])  => 
-  //this.address = JSON.stringify(result[0]);
-  console.log('Address ' + JSON.stringify(result[0])))
-  .catch((error: any) => console.log(error));
+      .then((result: NativeGeocoderResult[]) => {
+        this.address = JSON.stringify(result[0]);
+      }
+       // this.address = JSON.stringify(result[0])
+        //console.log('Address ' + JSON.stringify(result[0]))
+    ).catch((error: any) => console.log(error));
   }
  
 }

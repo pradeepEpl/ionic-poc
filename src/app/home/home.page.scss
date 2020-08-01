@@ -35,3 +35,8 @@ ion-grid {
   height: 50px;
   background-color: #f5424b;
 }
+
+ion-content {                                           //no-repeat center center fixed;
+  --background: url('../../assets/tileable_wood.PNG') 0 0/100% 100% no-repeat;
+
+}
