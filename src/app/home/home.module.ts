@@ -5,6 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { HeaderComponent } from '../header/header.component';
+import { MobilenavigationComponent } from '../mobilenavigation/mobilenavigation.component';
+import { BottonNavigationComponent } from '../botton-navigation/botton-navigation.component';
+import { StoreLocatorComponent } from '../store-locator/store-locator.component';
+import { DealTileComponent } from '../deal-tile/deal-tile.component';
 
 
 @NgModule({
@@ -12,8 +17,14 @@ import { HomePageRoutingModule } from './home-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
   ],
-  declarations: [HomePage]
+  entryComponents : [HeaderComponent],
+  declarations: [HomePage, 
+    HeaderComponent, 
+    MobilenavigationComponent, 
+    BottonNavigationComponent,
+    StoreLocatorComponent,
+    DealTileComponent]
 })
 export class HomePageModule {}
