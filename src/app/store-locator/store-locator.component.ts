@@ -11,7 +11,8 @@ export class StoreLocatorComponent implements OnInit {
 
   latitude: number;
   longitude: number;
-  address: string;
+  result: NativeGeocoderResult;
+  address : string;
 
   options: NativeGeocoderOptions = {
     useLocale: true,
@@ -37,7 +38,8 @@ export class StoreLocatorComponent implements OnInit {
 
     this.nativeGeocoder.reverseGeocode(this.latitude, this.longitude, this.options)
       .then((result: NativeGeocoderResult[]) => {
-        this.address = JSON.stringify(result[0]);
+        this.address = result[0].subLocality + " "+ result[0].subAdministrativeArea + " " +
+        result[0].administrativeArea + " " + result[0].countryName
       }
        // this.address = JSON.stringify(result[0])
         //console.log('Address ' + JSON.stringify(result[0]))

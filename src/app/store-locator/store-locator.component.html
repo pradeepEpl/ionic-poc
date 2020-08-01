@@ -14,7 +14,7 @@
           <ion-icon name="location-outline">Kanpur Up India</ion-icon>
           <ion-text>
             <!-- {{latitude + " " + longitude}} -->
-            {{address}}
+            {{address == null ? latitude + " " + longitude : address}}
           </ion-text>
         </div>
       </ion-col>
