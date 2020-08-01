@@ -1,0 +1,131 @@
+.exp-text {
+    color: #f5424b;
+    text-align: center;
+    font-size: 10px;
+}
+.pro-img {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.activate-img {
+    width: 80px;
+    height: 80px;
+    float: right;
+    margin-top: 5px;
+    margin-right: 20px;;
+}
+
+.sh-icon {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.sm-title {
+    border: 1px solid #000;
+    color: #f5424b;
+    float: right;
+    //position: relative;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.price {
+    //border: 1px solid #000;
+    color: #f5424b;
+    font-weight: bold;
+    font-size: 20px;
+    
+    
+    //margin-right: 10px;
+   // margin-top: 50px;
+}
+.pack {
+    float: left;
+    margin-left: 20px;
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+.desc {
+    color: #000000;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.deal-bg {
+    background-color: #f5424b;
+}
+
+.deal-txt {
+    color: #ffffff;
+    font-weight: 900;
+    font-size: medium;
+}
+
+.dis-price {
+    float: right;
+    margin-right: 20px;
+}
+// .main > .deal-div {
+//     height: 50px;
+//     background-color: #f5424b;
+//     text-align: center;
+//     .deal {
+//         color: #ffffff;
+//         font-size: 20px;
+//         font-weight: 900;
+//     }
+// }
+
+.img-container {
+    //border: 1px solid #000;
+    position: relative;
+    left:0;
+    top: 0;
+  }
+  
+  .img-activate {
+    width: 70px;
+    height: 70px;
+    //margin-top: 0px;
+    
+    margin-right: 5px;;
+    float: right;
+    //border: 1px solid #f00;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .img-product {
+    //border: 1px solid #0f0;
+    //position: relative;
+    //z-index: 1;
+    text-align: center;
+    //top: -12px;
+    //left: 50px;
+    //width: 180px;
+    //height: 180px;
+    // display: block;
+    // margin-left: auto;
+    // margin-right: auto;
+    // text-align: center;
+  }
+
+//   .inner {
+//       border: 1px solid blue;
+//   }
+
+  .bold-txt {
+      color: black;
+      font-size: 12px;
+      font-weight: bold;
+  }
