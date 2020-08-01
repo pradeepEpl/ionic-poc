@@ -1,0 +1,23 @@
+<div class="store">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="ion-text-start">
+          <ion-text class="heading">
+            Personal Ad
+          </ion-text>
+        </div>
+      </ion-col>
+
+      <ion-col (click)="store()">
+        <div class="ion-text-end">
+          <ion-icon name="location-outline">Kanpur Up India</ion-icon>
+          <ion-text>
+            {{latitude + " " + longitude}}
+          </ion-text>
+        </div>
+      </ion-col>
+    
+    </ion-row>
+  </ion-grid>
+</div>
